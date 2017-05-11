@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AngularJS Pizzaria</title>
+    <title>AngularJS HealthShop</title>
     <meta name="description" content="AngularJS Pizzaria">
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -21,6 +21,13 @@
                     <h1>{{product.name}}</h1>
                     <h2>{{product.price | currency}}</h2>
                     <img ng-src="{{product.images[0].full}}" width="400"/>
+                    <section>
+                        <ul class="nav nav-pills">
+                            <li><a href>Description</a></li>
+                            <li><a href>Ingredients</a></li>
+                            <li><a href>Benefits</a></li>
+                        </ul>
+                    </section>
                     <p>{{product.ingredients}}</p>
                     <button class="btn btn-lrg btn-info" ng-show="product.canOrder">Place an order</button>
                 </div>

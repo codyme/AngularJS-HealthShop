@@ -1,31 +1,35 @@
 var app = angular.module('store', []);
 
 app.controller('StoreController', function () {
-    this.products = pizzas;
+    this.products = superfoods;
 });
 
-var pizzas = [
+var superfoods = [
     {
-        name: 'Hawaiian',
-        price: 10.95,
-        ingredients: 'Crispy crust, tomato sauce, ham pieces, and pineapple chunks, mixed peppers, mushrooms, and bacon.',
+        name: 'Organic Raw Chocolate Goji and Coconut',
+        price: 6.75,
+        tagline: 'Full of antioxidants, this bar is scrumptiously crunchy and really hits the spot.',
+        ingredients: 'Cacao powder, cacao butter, and agave nectar, coconut butter, carob powder, goji berries (10%), coconut chips (6%), cinnamon and Himalayan salt.  Cacao solids 50% minimum.',
+        benefits: 'Our raw, hand-made chocolate is certified as organic, vegetarian and vegan, and sweetened only with agave nectar. It is gluten, dairy and soya free – with a low gi and gl.',
         images: [
             {
-                full: './images/hawaiian/full.png',
-                thumb: './images/hawaiian/thumb.png'
+                full: './images/chocolate/full.png',
+                slice: './images/chocolate/thumb.png'
             }
         ],
         canOrder: true,
         soldOut: false
     },
     {
-        name: 'Supreme',
-        price: 12,
-        ingredients: 'Crispy crust, pepperoni, ham, beef, pork sausage, Italian sausage, red onions, mushrooms, green peppers, and black olives.',
+        name: 'Coconut Chunks',
+        price: 7,
+        tagline: 'A simple snack with a delicious taste and a delightful crunch.',
+        ingredients: 'Coconut, cane sugar, salt.',
+        benefits: 'Rich in both dietary fibre and cholesterol-friendly, metabolism-boosting medium-chain triglycerides , it’s also a very healthy way to satisfy those between-meal cravings. Kids love these, too!',
         images: [
             {
-                full: './images/supreme/full.png',
-                thumb: './images/supreme/thumb.png'
+                full: './images/coconut/full.png',
+                slice: './images/coconut/thumb.png'
             }
         ],
         canOrder: true,
