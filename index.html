@@ -50,7 +50,7 @@
                                     <small><b>Review:</b> {{review.body}}</small>
                                     <small><b>by:</b> {{review.author}}</small>
                                 </blockquote>
-                                <form class="form-horizontal" name="reviewForm" ng-controller="ReviewController as reviewCtrl">
+                                <form class="form-horizontal" name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
                                     <fieldset>
                                         <legend>Submit a Review</legend>
 
