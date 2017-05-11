@@ -50,7 +50,7 @@
                                     <small><b>Review:</b> {{review.body}}</small>
                                     <small><b>by:</b> {{review.author}}</small>
                                 </blockquote>
-                                <form class="form-horizontal" name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+                                <form class="form-horizontal" name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
                                     <fieldset>
                                         <legend>Submit a Review</legend>
 
@@ -66,7 +66,7 @@
                                         <div class="form-group">
                                             <label for="stars" class="col-lg-2 control-label">Stars</label>
                                             <div class="col-lg-10">
-                                                <select ng-model="reviewCtrl.review.stars" class="form-control" id="stars">
+                                                <select ng-model="reviewCtrl.review.stars" class="form-control" id="stars" required>
                                                     <option>1</option>
                                                     <option>2</option>
                                                     <option>3</option>
@@ -78,13 +78,13 @@
                                         <div class="form-group">
                                             <label for="review" class="col-lg-2 control-label">Review</label>
                                             <div class="col-lg-10">
-                                                <textarea ng-model="reviewCtrl.review.body" class="form-control" rows="3" id="review"></textarea>
+                                                <textarea ng-model="reviewCtrl.review.body" name="body" class="form-control" rows="3" id="review" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                                             <div class="col-lg-10">
-                                                <input ng-model="reviewCtrl.review.author" type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                                <input ng-model="reviewCtrl.review.author" type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
                                             </div>
                                         </div>
                                         <div class="form-group">

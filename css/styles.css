@@ -1,3 +1,12 @@
+/* Tabs */
 .panel h4 {
     padding: 15px 0 5px 0;
+}
+
+/* Forms */
+.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+    border-color: #78FA89;
 }
