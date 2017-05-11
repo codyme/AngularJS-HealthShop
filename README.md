@@ -1,3 +1,3 @@
-# AngularJS-Pizzaria
+# AngularJS-HealthShop
 
 A work in progress :)
