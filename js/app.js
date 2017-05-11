@@ -29,6 +29,18 @@ var superfoods = [
                 slice: './images/chocolate/thumb.png'
             }
         ],
+        reviews: [
+            {
+                stars: 5,
+                body: 'Great product!',
+                author: 'amanda@health.com'
+            },
+            {
+                stars: 4,
+                body: 'A bit bitter for me, but still very healthy :)',
+                author: 'david@healthytech.com'
+            }
+        ],
         canOrder: true,
         soldOut: false
     },
@@ -42,6 +54,13 @@ var superfoods = [
             {
                 full: './images/coconut/full.png',
                 slice: './images/coconut/thumb.png'
+            }
+        ],
+        reviews: [
+            {
+                stars: 5,
+                body: 'Yum! Love it!',
+                author: 'sarah@healthykids.com'
             }
         ],
         canOrder: true,
