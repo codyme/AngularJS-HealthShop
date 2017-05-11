@@ -16,6 +16,10 @@ app.controller('PanelController', function () {
     };
 });
 
+app.controller('ReviewController', function(){
+    this.review = {};
+});
+
 var superfoods = [
     {
         name: 'Organic Raw Chocolate Goji and Coconut',
