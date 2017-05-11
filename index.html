@@ -46,10 +46,54 @@
                             <div class="panel" ng-show="panel.isSelected(3)">
                                 <h4>Reviews</h4>
                                 <blockquote ng-repeat="review in product.reviews">
-                                    <small>Stars: {{review.stars}}</small>
-                                    <small>{{review.body}}</small>
-                                    <small>by: {{review.author}}</small>
+                                    <small><b>Stars:</b> {{review.stars}}</small>
+                                    <small><b>Review:</b> {{review.body}}</small>
+                                    <small><b>by:</b> {{review.author}}</small>
                                 </blockquote>
+                                <form class="form-horizontal" name="reviewForm">
+                                    <fieldset>
+                                        <legend>Submit a Review</legend>
+
+                                        <div class="form-group preview-review">
+                                            <h5>Preview your review:</h5>
+                                            <blockquote>
+                                                <small><b>Stars:</b> {{review.stars}}</small>
+                                                <small><b>Review:</b> {{review.body}}</small>
+                                                <small><b>by:</b> {{review.author}}</small>
+                                            </blockquote>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="stars" class="col-lg-2 control-label">Stars</label>
+                                            <div class="col-lg-10">
+                                                <select ng-model="review.stars" class="form-control" id="stars">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="review" class="col-lg-2 control-label">Review</label>
+                                            <div class="col-lg-10">
+                                                <textarea ng-model="review.body" class="form-control" rows="3" id="review"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                                            <div class="col-lg-10">
+                                                <input ng-model="review.author" type="text" class="form-control" id="inputEmail" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-lg-10 col-lg-offset-2">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
                     </section>
